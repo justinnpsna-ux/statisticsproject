@@ -5,7 +5,7 @@ import math
 app = Flask(__name__)
 CORS(app)  # Enables Cross-Origin Resource Sharing for all routes
 
-@app.route('/api/data', methods=['POST'])
+@app.route('/api/sdCalculator', methods=['POST'])
 def get_data():
     response = request.get_json() 
     sum = 0

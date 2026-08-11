@@ -6,7 +6,7 @@ const submitBtn = document.getElementById("submitBtn");
 async function calculateSD(numList) {
   try {
     // 1. Send a request to the Flask API URL
-    const response = await fetch('http://localhost:8000/api/data', {
+    const response = await fetch('http://localhost:8000/api/sdCalculator', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json' // 🏷️ Tell Python this is JSON text

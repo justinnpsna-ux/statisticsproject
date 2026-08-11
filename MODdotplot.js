@@ -4,7 +4,7 @@ let dotArr = [];
 class Dot {
     constructor(x, y, radius) {
         this.x = x;
-        this.y = y;
+        this.y = 10;
         this.radius = 5;
     }
 }
