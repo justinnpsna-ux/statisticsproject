@@ -3,7 +3,7 @@ let secondNumber = document.getElementById("number2");
 let answerTxt = document.getElementById("answer");
 const submitBtn = document.getElementById("submitBtn");
 
-async function Sum(num1, num2) {
+async function calculateSD(numList) {
   try {
     // 1. Send a request to the Flask API URL
     const response = await fetch('http://localhost:8000/api/data', {
@@ -11,7 +11,7 @@ async function Sum(num1, num2) {
         headers: {
             'Content-Type': 'application/json' // 🏷️ Tell Python this is JSON text
         },
-        body: JSON.stringify({ firstNum: Number(num1), secondNum: Number(num2) })
+        body: JSON.stringify(numList.split(','))
     });
     
     // 2. Parse the incoming JSON data
@@ -25,6 +25,5 @@ async function Sum(num1, num2) {
 }
 
 submitBtn.addEventListener('click', () => {
-    Sum(firstNumber.value, secondNumber.value);
-    //firstNumber.value = "";
+    calculateSD(firstNumber.value);
 });
