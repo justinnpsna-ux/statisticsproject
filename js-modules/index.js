@@ -52,6 +52,7 @@ submitBtn.addEventListener('click', async () => {
     }
     
     const dotPlot = new DotPlot(min, max, scale);
+    dotPlot.getDotHash(firstNumber.value.split(','))
     dotPlot.drawDotPlot(firstNumber.value.split(','), canvas, entityList.dots);
 
 });

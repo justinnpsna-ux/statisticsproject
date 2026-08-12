@@ -15,7 +15,6 @@ def get_data():
 
     min = float(response[0])
     max = float(response[0])
-    print("MINIMUM VALUE IS:", min, flush=True)
 
     for numStr in response: 
         num = float(numStr)
